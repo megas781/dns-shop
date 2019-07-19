@@ -10,14 +10,15 @@ module.exports = {
     module:{
         rules: [
             {
-                test: /\.css/,
+                test: /\.scss/,
                 use: [
                     cssPlugin.loader,
                     {
                         loader: 'css-loader',
                         url: false
-                    }
-                ]
+                    },
+                    'sass-loader'
+                ],
             }
         ]
     },
