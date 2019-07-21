@@ -6,21 +6,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>dns-shop.ru</title>
+
+    <link rel="stylesheet" href="master/master.css">
+    <link rel="stylesheet" href="index/index.css">
+
+    <link rel="stylesheet" href="./vendors.js">
+
 </head>
 <body>
 
 <header class="header">
 
-    <div class="topbar">
+    <div class="topbar _theme_orange">
         <div class="container">
-            <!--            Выбор города-->
-            <div class="city-select topbar__city-select left-side-fit">
-                Волгоград
-            </div>
-
             <!--            Левый список-->
-            <ul class="elem-list topbar__common-list">
-                <li class="elem-list__item topbar__item"><a href="" class="elem-list__link topbar__link">Магазины</a>
+            <ul class="elem-list topbar__list topbar__common-list">
+                <!--            Выбор города-->
+                <li class="city-select topbar__city-select left-side-fit">
+                    Волгоград
+                </li>
+                <li class="elem-list__item topbar__item">
+                    <a href="" class="elem-list__link topbar__link">Магазины</a>
                 </li>
                 <li class="elem-list__item topbar__item _expandable">
                     <a href="" class="elem-list__link topbar__link">Покупателям</a>
@@ -39,12 +45,12 @@
             </ul>
 
             <!--            Список кнопок для профиля. В нем также находится кнопка уведомлений и номер телефона -->
-            <ul class="elem-list topbar__profile-list">
+            <ul class="elem-list topbar__list topbar__profile-list">
                 <li class="elem-list__item topbar__item topbar__phone-number">8-800-77-07-999 (c 03:00 до 22:00)</li>
 
                 <li class="notifications-button elem-list__item topbar__item topbar__notifications-button">
                     <span class="notifications-button__icon">УВ</span>
-                    <ul class="notifications-popover">
+                    <ul class="elem-list notifications-popover topbar__child-list">
                         <li class="notifications-popover__item"><a class="notifications-popover__link" href="">Все
                             уведомления</a></li>
                         <li class="notifications-popover__item"><a class="notifications-popover__link" href="">Настройка
@@ -53,7 +59,7 @@
                 </li>
 
                 <li class="elem-list__item topbar__item">
-                    <a href="" class="elem-list__link topbar__link">Вход</a>
+                    <a href="" class="elem-list__link topbar__link">Войти</a>
                 </li>
                 <li class="elem-list__item topbar__item">
                     <a href="" class="elem-list__link topbar__link">Регистрация</a>

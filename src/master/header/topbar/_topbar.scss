@@ -1,0 +1,74 @@
+@import "topbar-submenu";
+@import "notifications";
+
+.topbar {
+  background-color: $orange;
+  font-size: 13px;
+}
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.topbar__city-select {
+
+}
+.city-select {
+
+}
+
+// Список
+.topbar__list {
+  display: flex;
+}
+.topbar__item {
+
+}
+.topbar__item._expandable {
+
+}
+.topbar__link {
+
+}
+
+.topbar__common-list {
+
+}
+
+
+.topbar__common-list li {
+  padding-right: 16px;
+}
+.topbar__profile-list li {
+  padding-left: 16px;
+}
+
+// Субменю топа
+.topbar__child-list {
+  display: none;
+}
+.topbar__child-list-item {
+
+}
+.topbar__child-list-link {
+
+}
+
+
+.notifications-button {
+  margin: 0 16px;
+}
+.topbar__notifications-button {
+  //margin: 0 16px;
+}
+.notifications-button__icon {
+
+}
+
+.notifications-popover__item {
+
+}
+.notifications-popover__link {
+
+}

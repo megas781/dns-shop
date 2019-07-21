@@ -1,1 +1,1 @@
-require('./master.css');
+require('./master.scss');

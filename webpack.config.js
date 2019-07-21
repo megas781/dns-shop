@@ -1,12 +1,13 @@
 let cssPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
+
     entry: {
-        './vendors.js':'./src/vendors.js',
+        './vendors':'./src/vendors.js',
         './master/master': './src/master/master.js',
 
         './index/index': './src/index/index.js',
     },
-
     module:{
         rules: [
             {
@@ -15,7 +16,9 @@ module.exports = {
                     cssPlugin.loader,
                     {
                         loader: 'css-loader',
-                        url: false
+                        options: {
+                            url: false
+                        }
                     },
                     'sass-loader'
                 ],
