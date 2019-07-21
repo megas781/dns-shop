@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="master/master.css">
     <link rel="stylesheet" href="index/index.css">
 
-    <link rel="stylesheet" href="./vendors.js">
+    <link rel="stylesheet" href="./vendors.css">
+    <script src="./vendors.js"></script>
 
 </head>
 <body>
@@ -22,14 +23,14 @@
             <!--            Левый список-->
             <ul class="elem-list topbar__list topbar__common-list">
                 <!--            Выбор города-->
-                <li class="city-select topbar__city-select left-side-fit">
+                <li class="city-select topbar__city-select">
                     Волгоград
                 </li>
                 <li class="elem-list__item topbar__item">
                     <a href="" class="elem-list__link topbar__link">Магазины</a>
                 </li>
                 <li class="elem-list__item topbar__item _expandable">
-                    <a href="" class="elem-list__link topbar__link">Покупателям</a>
+                    <a class="elem-list__link topbar__link">Покупателям</a>
                     <ul class="elem-list topbar__child-list">
                         <li class="elem-list__item topbar__child-list-item">
                             <a href="" class="elem-list__link topbar__child-list-link">Подарочные карты</a>
@@ -69,13 +70,13 @@
         </div>
     </div>
 
-    <div class="prime-header">
+    <div class="prime-header _theme_light">
 
         <div class="container">
 
             <div class="logo">
                 <a class="logo__link" href="">
-                    <img class="logo__image" src="" alt="">
+                    <img class="logo__image" src="./assets/dns-logo.svg" alt="">
                 </a>
                 <div class="logo__hint">
                     Вернуться на главную
@@ -84,7 +85,7 @@
 
             <form class="search-form prime-header__search-form">
                 <input class="search-form__input" type="text" placeholder="Поиск среди более 100 000 товаров">
-                <span class="search-form__search-button">Искать</span>
+                <span class="search-form__search-button"><i class="fa fa-search" aria-hidden="true"></i></span>
             </form>
 
             <div class="prime-header__buttons">

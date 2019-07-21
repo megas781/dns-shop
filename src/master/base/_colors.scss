@@ -1,8 +1,9 @@
 $orange: #FA8728;
+$orangeHighlighted: #fc5808;
 
 $dark: #333333;
 
-$borderColor: #DEDEDE;
+$gray: #DEDEDE;
 $bgColor: #F6F6F6;
 
 
@@ -13,4 +14,20 @@ $bgColor: #F6F6F6;
 ._theme_orange a {
   color: white;
   text-decoration: none;
+}
+._theme_orange a:hover {
+  opacity: 0.7;
+}
+
+
+
+._theme__light {
+  background-color: white;
+  color: $dark;
+}
+._theme_light a {
+  color: $dark;
+}
+._theme_light a:hover {
+  color: $orangeHighlighted;
 }

@@ -1,0 +1,54 @@
+.prime-header {
+  padding: 12px 0;
+  font-size: 15px;
+}
+.prime-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+}
+.logo__link {
+
+}
+.logo__image {
+
+}
+.logo__hint {
+  display: none;
+  position: absolute;
+}
+
+.prime-header__search-form {
+  border-radius: 8px;
+  padding: 8px 10px;
+  border: 1px solid $gray;
+  margin: 0 16px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.search-form__input {
+  font-size: 15px;
+  font-family: "PT Sans";
+  border: none;
+  outline: none;
+  width: 100%;
+
+}
+.search-form__search-button {
+
+}
+
+.prime-header__buttons {
+
+}
+.prime-header__button {
+  text-decoration: none;
+  margin-right: 16px;
+  display: inline-block;
+  color: $dark;
+}

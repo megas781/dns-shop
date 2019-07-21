@@ -12,10 +12,13 @@
   padding: 8px 0;
 }
 .topbar__city-select {
-
+  width: $left-aside-fit;
+}
+._theme_orange .topbar__city-select:hover {
+  opacity: 0.7;
 }
 .city-select {
-
+  cursor: pointer;
 }
 
 // Список
@@ -58,6 +61,10 @@
 
 .notifications-button {
   margin: 0 16px;
+  cursor: pointer;
+}
+._theme_orange .notifications-button:hover {
+  opacity: 0.7;
 }
 .topbar__notifications-button {
   //margin: 0 16px;
