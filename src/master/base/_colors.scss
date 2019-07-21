@@ -11,13 +11,17 @@ $bgColor: #F6F6F6;
   background-color: $orange;
   color: white;
 }
+
 ._theme_orange a {
   color: white;
   text-decoration: none;
 }
-._theme_orange a:hover {
-  opacity: 0.7;
-}
+//._theme_orange a:hover {
+//  opacity: 0.7;
+//}
+//._theme_orange li:hover::after {
+//  opacity: 0.7;
+//}
 
 
 

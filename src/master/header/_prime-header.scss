@@ -40,7 +40,12 @@
 
 }
 .search-form__search-button {
-
+  cursor: pointer;
+  opacity: 0.5;
+  font-size: 18px;
+}
+.search-form__search-button:hover {
+  opacity: 1;
 }
 
 .prime-header__buttons {
@@ -51,4 +56,9 @@
   margin-right: 16px;
   display: inline-block;
   color: $dark;
+}
+.prime-header__button i {
+  color: $gray;
+  font-size: 17px;
+  margin-right: 4px;
 }
