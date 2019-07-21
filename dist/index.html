@@ -13,12 +13,12 @@
 
     <div class="topbar">
         <div class="container">
-<!--            Выбор города-->
+            <!--            Выбор города-->
             <div class="city-select topbar__city-select left-side-fit">
                 Волгоград
             </div>
 
-<!--            Левый список-->
+            <!--            Левый список-->
             <ul class="elem-list topbar__common-list">
                 <li class="elem-list__item topbar__item"><a href="" class="elem-list__link topbar__link">Магазины</a>
                 </li>
@@ -38,15 +38,17 @@
                 </li>
             </ul>
 
-<!--            Список кнопок для профиля. В нем также находится кнопка уведомлений и номер телефона -->
+            <!--            Список кнопок для профиля. В нем также находится кнопка уведомлений и номер телефона -->
             <ul class="elem-list topbar__profile-list">
                 <li class="elem-list__item topbar__item topbar__phone-number">8-800-77-07-999 (c 03:00 до 22:00)</li>
 
                 <li class="notifications-button elem-list__item topbar__item topbar__notifications-button">
                     <span class="notifications-button__icon">УВ</span>
                     <ul class="notifications-popover">
-                        <li class="notifications-popover__item"><a class="notifications-popover__link" href="">Все уведомления</a></li>
-                        <li class="notifications-popover__item"><a class="notifications-popover__link" href="">Настройка уведомлений</a></li>
+                        <li class="notifications-popover__item"><a class="notifications-popover__link" href="">Все
+                            уведомления</a></li>
+                        <li class="notifications-popover__item"><a class="notifications-popover__link" href="">Настройка
+                            уведомлений</a></li>
                     </ul>
                 </li>
 
@@ -95,6 +97,39 @@
 
     <div class="container">
         <aside>
+
+            <ul class="elem-list aside-menu">
+
+                <li class="elem-list__item aside-menu__item">
+                    <a href="" class="elem-list__link aside-menu__link">Компьютеры и периферия</a>
+
+<!--                    субменю первого уровня -->
+                    <div class="aside-submenu1 aside-menu__aside-submenu1">
+
+<!--                        какие-то хлебные крошки submenu первого уровня -->
+                        <div class="aside-submenu1__something-here">
+                        </div>
+
+<!--                        А далее идет контейнер для submenu2-шек -->
+                        <ul class="elem-list aside-submenu1__list">
+
+<!--                            А здесь уже идут видимые субменюшки 2-го уровня-->
+                            <li class="elem-item aside-submenu2 aside-submenu1__item">
+                                <div class="aside-submenu2__title">
+                                    <a href="">Основные комплектующие</a>
+                                </div>
+
+                                <ul class="aside-submenu2__list">
+                                    <li class="elem-list__item aside-submenu2__item">
+                                        <a href="" class="elem-list__link aside-submenu2__link _expandable">Процессоры</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </li>
+            </ul>
 
         </aside>
 
