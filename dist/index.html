@@ -103,25 +103,32 @@
                 <li class="elem-list__item aside-menu__item">
                     <a href="" class="elem-list__link aside-menu__link">Компьютеры и периферия</a>
 
-<!--                    субменю первого уровня -->
-                    <div class="aside-submenu1 aside-menu__aside-submenu1">
+<!--                    wrapper для submenu первого уровня -->
+                    <div class="aside-submenu-wrapper">
 
 <!--                        какие-то хлебные крошки submenu первого уровня -->
-                        <div class="aside-submenu1__something-here">
+                        <div class="">
                         </div>
 
-<!--                        А далее идет контейнер для submenu2-шек -->
-                        <ul class="elem-list aside-submenu1__list">
 
-<!--                            А здесь уже идут видимые субменюшки 2-го уровня-->
-                            <li class="elem-item aside-submenu2 aside-submenu1__item">
-                                <div class="aside-submenu2__title">
-                                    <a href="">Основные комплектующие</a>
+                        <ul class="elem-list aside-submenu1">
+
+                            <li class="elem-list__item aside-submenu1__item">
+                                <div>
+                                    <a href="" class="aside-submenu1__link">Основные комплектующие</a>
                                 </div>
 
-                                <ul class="aside-submenu2__list">
+<!--                            А здесь уже идёт видимая субменюшка 2-го уровня-->
+                                <ul class="elem-list aside-submenu2">
                                     <li class="elem-list__item aside-submenu2__item">
                                         <a href="" class="elem-list__link aside-submenu2__link _expandable">Процессоры</a>
+
+                                        <!-- наконец-то субменю 3-го уровня -->
+                                        <ul class="elem-list aside-submenu3">
+                                            <li class="elem-list__item aside-submenu3__item">
+                                                <a href="" class="elem-list__link aside-submenu3__link">Топовые процессоры</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
