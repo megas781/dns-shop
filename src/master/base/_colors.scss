@@ -1,5 +1,7 @@
 $orange: #FA8728;
-$orangeHighlighted: #fc5808;
+$primeHeaderOrange: #fc5808;
+
+$asideOrange: #F9B77B;
 
 $dark: #333333;
 
@@ -33,5 +35,5 @@ $bgColor: #F6F6F6;
   color: $dark;
 }
 ._theme_light a:hover {
-  color: $orangeHighlighted;
+  //color: $orangeHighlighted;
 }

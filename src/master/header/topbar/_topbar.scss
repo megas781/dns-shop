@@ -4,15 +4,21 @@
 .topbar {
   background-color: $orange;
   font-size: 13px;
+  position: relative;
+  z-index: $topbarZ;
 }
 .topbar .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 0;
+  flex-wrap: wrap;
+
+  //padding: 8px 0;
+  box-sizing: border-box;
+  height: $topbarHeight;
 }
 .topbar__city-select {
-  width: $left-aside-fit;
+  width: $leftAsideFit;
 }
 ._theme_orange .topbar__city-select:hover {
   opacity: 0.7;
@@ -28,11 +34,10 @@
 .topbar__item {
   position: relative;
 }
-.topbar__item:hover {
+.topbar__item:hover:not(.topbar__phone-number) {
   opacity: 0.7;
 }
 .topbar__item._expandable::after {
-
   content: '';
   display: block;
   position: absolute;

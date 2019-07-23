@@ -1,0 +1,31 @@
+.aside-submenu-wrapper {
+  left: $leftAsideFit;
+  position: absolute;
+  display: none;
+  background-color: white;
+  padding: 16px;
+
+  border-radius: 0 4px 4px 0;
+
+  border: 1px solid $gray;
+  border-left: none;
+
+}
+
+
+.aside-submenu1 {
+  //width: 700px;
+  //height: 350px;
+}
+.aside-submenu1__item {
+  display: block;
+}
+.aside-submenu1__link {
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: bolder;
+  text-decoration: none;
+  display: block;
+
+  margin: 8px 0;
+}

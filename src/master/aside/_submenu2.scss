@@ -1,0 +1,36 @@
+.aside-submenu2 {
+  //display: none;
+  padding-left: 20px;
+}
+.aside-submenu2.grid {
+  display: grid;
+  //grid-gap: 16px;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+}
+.aside-submenu2__item {
+
+}
+.aside-submenu2__item._expandable .aside-submenu2__link::after {
+  content: '';
+  position: relative;
+  display: inline-block;
+
+  left: 4px;
+  bottom: 1px;
+
+  border: 1px solid $dark;
+  border-width: 0 1px 1px 0;
+  $a: 4px;
+  height: $a;
+  width: $a;
+  transform: rotate(-45deg);
+}
+.aside-submenu2__link {
+  padding: 8px 0;
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+}
+.aside-submenu2__link._expandable {
+
+}
