@@ -27,10 +27,20 @@
 }
 .aside-submenu2__link {
   padding: 8px 0;
-  display: block;
+  display: inline-block;
   text-decoration: none;
   font-size: 14px;
 }
 .aside-submenu2__link._expandable {
 
+}
+
+.aside-submenu2__item.active .aside-submenu3 {
+  display: block;
+}
+
+.aside-submenu2__item.active .aside-submenu3 {
+  display: block;
+  top: -9px;
+  left: 108px;
 }

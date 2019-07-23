@@ -2,4 +2,5 @@
 require('./master.scss');
 
 //Подключение мастер-скриптов
-require('./aside/aside-menu.js');
+require('./aside/submenu.js');
+require('./aside/submenu3.js');
