@@ -47,7 +47,9 @@ document.querySelectorAll('.aside-menu__item').forEach(function (item, key, pare
 
     item.addEventListener('mouseleave', function (e) {
         console.log(`leave ${key + 1}`);
-
+        if (activeItem == null) {
+            clearTimeout(hoverIndex);
+        }
         //Устанавливаем outTimout только если данный item является активным
         if (activeItem === item) {
             outIndex = setTimeout(function () {

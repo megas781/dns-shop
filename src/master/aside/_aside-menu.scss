@@ -6,6 +6,9 @@ aside {
   background-color: white;
   position: relative;
 }
+.aside-menu a {
+  color: $dark;
+}
 .aside-menu a:hover {
   color: $asideOrange;
 }
@@ -23,6 +26,7 @@ aside {
   position: relative;
   border-right: 1px solid $gray;
   border-bottom: 1px solid $gray;
+  color: $dark;
 }
 .aside-menu__link::after {
   content: '';
@@ -60,6 +64,6 @@ aside {
 
 
 
-._theme_light .aside-menu__link i {
+.aside-menu__link i {
   color: $asideOrange;
 }
