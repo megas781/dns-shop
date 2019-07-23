@@ -1,0 +1,31 @@
+.notifications-button {
+
+}
+.topbar__item.topbar__notifications-button {
+  position: static;
+}
+.notifications-button__body {
+
+}
+.notifications-popover {
+  background-color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  top: 44px;
+  right: 0;
+  margin-right: 2px;
+  min-width: 300px;
+  padding: 8px 0;
+  display: none;
+}
+.notifications-popover__item {
+  padding: 6px 8px;
+}
+.notifications-popover__link {
+  color: #0d61af;
+}
+
+
+.notifications-button.active .notifications-popover {
+  display: block;
+}

@@ -52,6 +52,9 @@ document.querySelectorAll('.aside-menu__item').forEach(function (item, key, pare
         if (activeItem === item) {
             outIndex = setTimeout(function () {
                 resignActiveItem(item);
+                // submenu.querySelectorAll('.aside-submenu3').forEach(function (submenu3) {
+                //     submenu3.style.display = 'none';
+                // });
             }, duration);
         }
     })

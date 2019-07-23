@@ -18,14 +18,14 @@
 
 <header class="header">
 
-    <div class="topbar _theme_orange">
+    <div class="topbar">
         <div class="container">
             <!--            Левый список-->
             <ul class="elem-list topbar__list topbar__common-list">
                 <!--            Выбор города-->
                 <li class="city-select topbar__city-select">
-                    <i class="fa fa-map-marker fa-fw fa-lg" aria-hidden="true"></i>
-                    <span>Волгоград</span>
+
+                    <span class="elem-list__body"><i class="fa fa-map-marker fa-fw fa-lg" aria-hidden="true"></i> Волгоград</span>
                 </li>
                 <li class="elem-list__item topbar__item">
                     <a href="" class="elem-list__link topbar__link">Магазины</a>
@@ -51,11 +51,11 @@
                 <li class="elem-list__item topbar__item topbar__phone-number"><i class="fa fa-phone fa-lg" aria-hidden="true"></i> 8-800-77-07-999 (c 03:00 до 22:00)</li>
 
                 <li class="notifications-button elem-list__item topbar__item topbar__notifications-button">
-                    <span class="notifications-button__icon"><i class="fa fa-bell" aria-hidden="true"></i></span>
+                    <span class="notifications-button__body"><i class="fa fa-bell" aria-hidden="true"></i></span>
                     <ul class="elem-list notifications-popover topbar__child-list">
-                        <li class="notifications-popover__item"><a class="notifications-popover__link" href="">Все
+                        <li class="notifications-popover__item topbar__child-list-item"><a class="notifications-popover__link topbar__child-list-link" href="">Все
                             уведомления</a></li>
-                        <li class="notifications-popover__item"><a class="notifications-popover__link" href="">Настройка
+                        <li class="notifications-popover__item topbar__child-list-item"><a class="notifications-popover__link topbar__child-list-link" href="">Настройка
                             уведомлений</a></li>
                     </ul>
                 </li>
@@ -71,7 +71,7 @@
         </div>
     </div>
 
-    <div class="prime-header _theme_light">
+    <div class="prime-header">
 
         <div class="container">
 
@@ -104,7 +104,7 @@
 <div class="page">
 
     <div class="container">
-        <aside class="aside _theme_light">
+        <aside class="aside">
             <div class="dim"></div>
             <ul class="elem-list aside-menu">
 
@@ -217,7 +217,6 @@
                                     </li>
                                     <li class="elem-list__item aside-submenu2__item _expandable">
                                         <a href="" class="elem-list__link aside-submenu2__link">Other</a>
-
                                         <!-- наконец-то субменю 3-го уровня -->
                                         <ul class="elem-list aside-submenu3">
                                             <li class="elem-list__item aside-submenu3__item">

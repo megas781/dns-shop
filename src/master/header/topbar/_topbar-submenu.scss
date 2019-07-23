@@ -1,0 +1,29 @@
+
+// Субменю топа
+.topbar__child-list {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid $gray;
+  min-width: 240px;
+  top: $topbarHeight - 1px;
+  border-radius: 3px;
+}
+.topbar__child-list-item {
+  padding: 8px;
+
+}
+.topbar__child-list-link {
+  color: $dark;
+  text-decoration: none;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
+}
+.topbar__child-list-link:hover {
+  color: $primeHeaderOrange;
+}
+
+.topbar__item._expandable.active .topbar__child-list {
+  display: block;
+}

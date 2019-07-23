@@ -6,8 +6,11 @@
   font-size: 13px;
   position: relative;
   z-index: $topbarZ;
+  color: white;
 }
+
 .topbar .container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,34 +20,37 @@
   box-sizing: border-box;
   height: $topbarHeight;
 }
-.topbar__city-select {
-  width: $leftAsideFit;
-}
-._theme_orange .topbar__city-select:hover {
-  opacity: 0.7;
-}
 .city-select {
   cursor: pointer;
 }
+.topbar__city-select {
+  width: $leftAsideFit;
+}
+.topbar__city-select:hover .elem-list__body {
+  opacity: 0.7;
+}
+
 
 // Список
 .topbar__list {
   display: flex;
 }
+
 .topbar__item {
   position: relative;
+  user-select: none;
 }
-.topbar__item:hover:not(.topbar__phone-number) {
-  opacity: 0.7;
+.topbar__item._expandable {
+  position: static;
 }
-.topbar__item._expandable::after {
+.topbar__item._expandable .topbar__link::after {
   content: '';
   display: block;
   position: absolute;
   $a: 5px;
   width: $a;
   height: $a;
-  right: 6px;
+  right: -2 * $a;
   top: 4px;
   border-width: 0;
 
@@ -54,39 +60,37 @@
   border-style: solid;
   transform: rotate(-45deg);
 }
-.topbar__link {
 
+.topbar__link {
+  color: white;
+  text-decoration: none;
+  position: relative;
 }
+.topbar__link:hover {
+  opacity: 0.7;
+}
+
 
 .topbar__common-list {
 
 }
-
-
 .topbar__common-list li {
   padding-right: 16px;
 }
+
 .topbar__profile-list li {
   padding-left: 16px;
 }
 
-// Субменю топа
-.topbar__child-list {
-  display: none;
+.topbar__phone-number {
+  user-select: initial;
 }
-.topbar__child-list-item {
-
-}
-.topbar__child-list-link {
-
-}
-
 
 .notifications-button {
   margin: 0 16px;
   cursor: pointer;
 }
-._theme_orange .notifications-button:hover {
+.notifications-button__body:hover {
   opacity: 0.7;
 }
 .topbar__notifications-button {
@@ -95,7 +99,6 @@
 .notifications-button__icon {
 
 }
-
 .notifications-popover__item {
 
 }
