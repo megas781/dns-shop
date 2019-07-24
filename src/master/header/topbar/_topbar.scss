@@ -16,8 +16,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  //padding: 8px 0;
-  box-sizing: border-box;
+  //box-sizing: border-box;
   height: $topbarHeight;
 }
 .city-select {
@@ -41,7 +40,7 @@
   user-select: none;
 }
 .topbar__item._expandable {
-  position: static;
+
 }
 .topbar__item._expandable .topbar__link::after {
   content: '';

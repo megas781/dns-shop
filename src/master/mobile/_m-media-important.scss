@@ -1,0 +1,28 @@
+@media (min-width: $mobileWidth + 1px) {
+  .m-topbar {
+    display: none;
+  }
+  .catalog-button {
+    display: none;
+  }
+  .m-nav {
+    display: none;
+  }
+}
+@media (max-width: $mobileWidth) {
+  .topbar {
+    display: none;
+  }
+  .prime-header {
+    display: none;
+  }
+  .page {
+    margin-top: 24px;
+  }
+  .aside {
+    display: none;
+  }
+  .page .container {
+    display: block;
+  }
+}

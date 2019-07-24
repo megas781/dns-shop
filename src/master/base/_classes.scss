@@ -1,5 +1,6 @@
 .container {
-  max-width: 1200px + 2 * $containerPadding;
+  //max-width: 1200px + 2 * $containerPadding;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 $containerPadding;
 }
@@ -32,4 +33,11 @@
 }
 .dim.visible {
   display: block;
+}
+.search-form {
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin: 0 16px;
+  display: flex;
+  align-items: center;
 }

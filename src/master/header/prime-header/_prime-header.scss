@@ -10,23 +10,32 @@
   background-color: white;
   z-index: $primeHeaderZ;
 }
+.prime-header.fixed {
+  position: fixed;
+  top: 0;
+}
+
 .prime-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
   height: $primeHeaderHeight;
 }
 
 
 .logo {
+  width: $leftAsideFit;
   position: relative;
+  height: 100%;
 }
 .logo__link {
-
-}
-.logo__image {
-
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-image: url("../assets/dns-logo.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .logo__hint {
   display: none;
@@ -34,12 +43,9 @@
 }
 
 .prime-header__search-form {
-  border-radius: 8px;
-  padding: 8px 10px;
+
   border: 1px solid $gray;
-  margin: 0 16px;
-  display: flex;
-  align-items: center;
+  background-color: white;
   flex-grow: 1;
 }
 .search-form__input {
@@ -64,7 +70,7 @@
 }
 .prime-header__button {
   text-decoration: none;
-  margin-right: 16px;
+  margin-left: 16px;
   display: inline-block;
   color: $dark;
 }

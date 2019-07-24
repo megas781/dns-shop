@@ -1,0 +1,21 @@
+.catalog-button {
+  background-color: $orange;
+  color: white;
+  cursor: pointer;
+  padding: 32px 0;
+
+
+  .text {
+    flex-grow: 1;
+    margin: 0 16px;
+  }
+  .title {
+    font-size: 24px;
+  }
+}
+.catalog-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+

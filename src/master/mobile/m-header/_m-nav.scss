@@ -1,0 +1,28 @@
+.m-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: white;
+}
+.m-nav__link {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 12px 0;
+  border-color: $gray;
+  border-style: solid;
+  border-width: 0;
+  border-bottom-width: 1px;
+  color: black;
+  font-size: 18px;
+}
+.m-nav__link:not(:last-child) {
+  border-right-width: 1px;
+}
+.m-nav__link i {
+  color: #8E8E8E;
+}
+.m-nav__link:hover span {
+  text-decoration: underline;
+  color: #00608d;
+}

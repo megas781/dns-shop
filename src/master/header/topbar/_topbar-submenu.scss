@@ -5,8 +5,10 @@
   position: absolute;
   background-color: white;
   border: 1px solid $gray;
-  min-width: 240px;
-  top: $topbarHeight - 1px;
+  min-width: $topbarSubmenuWidth;
+  left: -$topbarSubmenuWidth/2 + 40px;
+  top: $topbarHeight - 9px;
+
   border-radius: 3px;
 }
 .topbar__child-list-item {
