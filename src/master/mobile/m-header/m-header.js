@@ -10,33 +10,6 @@ function preventDefault(e) {
     e.preventDefault();
 }
 
-function disableScrolling() {
-    let disableScrollAreas = [
-        document.querySelector('.m-topbar'),
-        document.querySelector('.page'),
-        document.querySelector('.footer')
-    ];
-    ['touchmove', 'wheel'].forEach(function (eventString) {
-        disableScrollAreas.forEach(function (area) {
-            area.addEventListener(eventString, preventDefault);
-        });
-    });
-}
-
-function enableScrolling() {
-    let disableScrollAreas = [
-        document.querySelector('.m-topbar'),
-        document.querySelector('.page'),
-        document.querySelector('.footer')
-    ];
-    ['touchmove', 'wheel'].forEach(function (eventString) {
-        disableScrollAreas.forEach(function (area) {
-            // console.log('disable scrolling v0.0.1');
-            area.removeEventListener(eventString, preventDefault);
-        })
-    });
-}
-
 window.addEventListener('resize', function () {
 
     //Прячем m-menu, если ширина десктопа
@@ -64,9 +37,8 @@ function showMobileMenu() {
             right: '-' + getComputedStyle(mobileMenu).width
         }, {
             right: 0,
-        }, 'start+=0.1');
+        }, 'start+=0.01');
 }
-
 function hideMobileMenu() {
     mobileMenuWrapper.classList.remove('open');
     document.querySelector('body').classList.remove('not-scrolling');
@@ -77,7 +49,10 @@ function hideMobileMenu() {
             opacity: 0
         }, 'start')
         .to(mobileMenu, duration, {
-            right: '-' + getComputedStyle(mobileMenu).width
+            right: '-' + getComputedStyle(mobileMenu).width,
+            onComplete() {
+                mobileMenuWrapper.scrollTo({top: 0});
+            }
         }, 'start')
         .set(mobileMenuWrapper, {display: 'none'});
 }
@@ -90,3 +65,18 @@ burgerButton.addEventListener('click', function (e) {
     }
 });
 mobileMenuDim.addEventListener('click', hideMobileMenu);
+
+
+
+var elems = document.getElementsByTagName( 'a' );
+
+for (var i = 0; i < elems.length; i++ ) {
+
+    (function(numb) {
+        elems[arguments[0]].addEventListener( 'click', function(e){
+            e.preventDefault();
+            alert( 'I am link #' + numb );
+        }, 'false' );
+    })(i);
+
+}
