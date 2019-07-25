@@ -1,5 +1,5 @@
 //Запросы, спрятывающие мобильные элементы
-@media (min-width: $mobileWidth + 1px) {
+@media (min-width: $minMobileWidth + 1px) {
   .m-topbar {
     display: none;
   }
@@ -14,7 +14,7 @@
   }
 }
 //Запросы, скрывающие элементы десктопа
-@media (max-width: $mobileWidth) {
+@media (max-width: $minMobileWidth) {
   .topbar {
     display: none;
   }

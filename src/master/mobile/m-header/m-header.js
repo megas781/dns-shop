@@ -22,6 +22,7 @@ function disableScrolling() {
         });
     });
 }
+
 function enableScrolling() {
     let disableScrollAreas = [
         document.querySelector('.m-topbar'),
@@ -36,9 +37,20 @@ function enableScrolling() {
     });
 }
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
 
+    //Прячем m-menu, если ширина десктопа
+    if (mobileMenuWrapper.classList.contains('open')) {
+        if (window.innerWidth > 1000) {
+            document.querySelector('body').classList.remove('not-scrolling');
+            mobileMenuWrapper.style.display = 'none';
+        } else {
+            document.querySelector('body').classList.add('not-scrolling');
+            mobileMenuWrapper.style.display = 'block';
+        }
+    }
 });
+
 function showMobileMenu() {
     mobileMenuWrapper.classList.add('open');
     document.querySelector('body').classList.add('not-scrolling');
@@ -50,10 +62,11 @@ function showMobileMenu() {
         }, 'start')
         .fromTo(mobileMenu, duration, {
             right: '-' + getComputedStyle(mobileMenu).width
-        },{
+        }, {
             right: 0,
         }, 'start+=0.1');
 }
+
 function hideMobileMenu() {
     mobileMenuWrapper.classList.remove('open');
     document.querySelector('body').classList.remove('not-scrolling');
