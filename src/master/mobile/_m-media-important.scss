@@ -1,3 +1,4 @@
+//Запросы, спрятывающие мобильные элементы
 @media (min-width: $mobileWidth + 1px) {
   .m-topbar {
     display: none;
@@ -8,7 +9,11 @@
   .m-nav {
     display: none;
   }
+  .m-menu-wrapper {
+    display: none;
+  }
 }
+//Запросы, скрывающие элементы десктопа
 @media (max-width: $mobileWidth) {
   .topbar {
     display: none;

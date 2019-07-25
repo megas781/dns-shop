@@ -6,6 +6,7 @@ require('./header/topbar/topbar.js');
 //Подключение мастер-скриптов
 require('./aside/submenu.js');
 require('./aside/submenu3.js');
+require('./mobile/m-header/m-header.js');
 
 const topbarHeight = 34;
 let onscroll = function () {

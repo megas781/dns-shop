@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "css-loader": "^3.1.0",
+    "disable-scroll": "^0.5.0",
+    "expose-loader": "^0.7.5",
     "file-loader": "^4.1.0",
     "font-awesome": "^4.7.0",
     "gsap": "^2.1.3",

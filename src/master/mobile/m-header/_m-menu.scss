@@ -1,0 +1,96 @@
+.m-menu-button {
+
+}
+
+.m-menu-wrapper {
+  position: fixed;
+  top: $mTopbarHeight + 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  z-index: $mMenuZ;
+  //вместо appearance: none
+  //background-color: rgba(0, 0, 0, 0.0);
+  display: none;
+}
+.m-menu-dim {
+  display: block;
+  top: $mTopbarHeight + 1px;
+  z-index: -1;
+}
+.m-menu {
+  background-color: white;
+  position: absolute;
+  right: -100vw;
+  top: 0;
+  width: 100%;
+  //z-index: $mMenuZ;
+}
+
+.m-menu__item {
+
+}
+
+.m-menu__link {
+  display: block;
+  padding: 18px 16px;
+  text-decoration: none;
+  color: $dark;
+  font-size: 18px;
+}
+
+
+  //Appearance
+
+//Common
+.m-menu__item._common {
+  border-bottom: 1px solid #DFDFDF;
+}
+.m-menu__item._common:hover {
+  background-color: $bgColor;
+}
+.m-menu__item._common .m-menu__link::after {
+  content: "\f105";
+  font-family: 'FontAwesome';
+  display: block;
+  position: absolute;
+  right: 24px;
+  height: 100%;
+  top: calc(50% - 9px);
+}
+
+//Выбор города
+.m-menu__item._city-select {
+  background-color: $bgColor;
+}
+
+//Каталог
+.m-menu__item._common._catalog {
+  background-color: #FD8F3C;
+
+  a {
+    color: white;
+  }
+
+  :hover {
+    background-color: #D4711F;
+  }
+}
+
+.m-menu__item._corporative {
+  background-color: #828282;
+  border-bottom: none;
+}
+.m-menu__item._corporative:hover {
+  background-color: #696969;
+}
+.m-menu__item._corporative a {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .m-menu {
+    width: 300px;
+  }
+}
