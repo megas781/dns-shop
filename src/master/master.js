@@ -29,3 +29,5 @@ let onscroll = function () {
 }
 window.onscroll = onscroll;
 onscroll();
+
+require('./miranda.js');
