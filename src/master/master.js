@@ -3,9 +3,9 @@ require('./master.scss');
 
 //Подключение мастер-скриптов
 require('./js-libs.ts');
-require('./header/topbar/topbar.js');
-require('./aside/submenu.js');
-require('./aside/submenu3.js');
+require('./header/topbar/topbar.ts');
+require('./aside/submenu.ts');
+require('./aside/submenu3.ts');
 require('./mobile/m-header/m-header.js');
 require('./miranda.ts');
 

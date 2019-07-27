@@ -1,8 +1,7 @@
 const duration = 500;
 
-let dim = document.querySelector('.dim');
-let dimOutTimeoutIndex = null;
-
+let dim: HTMLElement = document.querySelector('.dim');
+let dimOutTimeoutIndex: number = null;
 document.querySelector('.aside-menu').addEventListener('mouseleave', function () {
     dimOutTimeoutIndex = setTimeout(function () {
         dim.classList.remove('visible');
@@ -20,13 +19,13 @@ let outIndex = null;
 document.querySelectorAll('.aside-menu__item').forEach(function (item, key, parent) {
 
     //Заранее объявляем submenu нашего item'a
-    let submenu = item.querySelector('.aside-submenu-wrapper');
+    let submenu: HTMLElement = item.querySelector('.aside-submenu-wrapper');
     item.querySelector('.aside-menu__link').innerHTML += ` (${++k})`;
     submenu.querySelector('.aside-submenu1__link').innerHTML += ` (${k})`;
     if (key < 9) {
-        submenu.style.top = 0;
+        submenu.style.top = '0';
     } else {
-        submenu.style.bottom = 0;
+        submenu.style.bottom = '0';
     }
 
 
