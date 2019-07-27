@@ -3,8 +3,8 @@ let cssPlugin = require('mini-css-extract-plugin');
 module.exports = {
 
     entry: {
-        './ui-libs':'./src/ui-libs.js',
-        './master/master': './src/master/master.js',
+        './ui-libs':'./src/ui-libs.ts',
+        './master/master': './src/master/master.ts',
 
         './index/index': './src/index/index.js',
     },

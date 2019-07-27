@@ -1,16 +1,19 @@
+// import TweenLite, { _gsScope, TweenPlugin, Ease, Power0, Power1, Power2, Power3, Power4, Linear } from "gsap/TweenLite.js";
+import TimelineLite from "gsap/TimelineLite.js";
+import "gsap/CSSPlugin.js";
 
+class MobileMenu {
 
-let burgerButton = document.querySelector('.m-menu-button');
-let mobileMenuWrapper = document.querySelector('.m-menu-wrapper');
-let mobileMenuDim = document.querySelector('.m-menu-dim');
-let mobileMenu = document.querySelector('.m-menu');
-let page = document.querySelector('.page');
+}
+
+let burgerButton: HTMLElement = document.querySelector('.m-menu-button');
+let mobileMenuWrapper: HTMLElement = document.querySelector('.m-menu-wrapper');
+let mobileMenuDim: HTMLElement = document.querySelector('.m-menu-dim');
+let mobileMenu: HTMLElement = document.querySelector('.m-menu');
+let page: HTMLElement = document.querySelector('.page');
 
 let duration = 0.3;
 
-function preventDefault(e) {
-    e.preventDefault();
-}
 
 window.addEventListener('resize', function () {
 
@@ -41,6 +44,7 @@ function showMobileMenu() {
             right: 0,
         }, 'start+=0.01');
 }
+
 function hideMobileMenu() {
     mobileMenuWrapper.classList.remove('open');
     document.querySelector('body').classList.remove('not-scrolling');
@@ -67,18 +71,3 @@ burgerButton.addEventListener('click', function (e) {
     }
 });
 mobileMenuDim.addEventListener('click', hideMobileMenu);
-
-
-
-var elems = document.getElementsByTagName( 'a' );
-
-for (var i = 0; i < elems.length; i++ ) {
-
-    (function(numb) {
-        elems[arguments[0]].addEventListener( 'click', function(e){
-            e.preventDefault();
-            alert( 'I am link #' + numb );
-        }, 'false' );
-    })(i);
-
-}
