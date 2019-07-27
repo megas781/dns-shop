@@ -1,12 +1,13 @@
 //Подключение мастер-стилей
 require('./master.scss');
 
-require('./header/topbar/topbar.js');
-
 //Подключение мастер-скриптов
+require('./js-libs.ts');
+require('./header/topbar/topbar.js');
 require('./aside/submenu.js');
 require('./aside/submenu3.js');
 require('./mobile/m-header/m-header.js');
+require('./miranda.ts');
 
 const topbarHeight = 34;
 let onscroll = function () {
@@ -30,4 +31,3 @@ let onscroll = function () {
 window.onscroll = onscroll;
 onscroll();
 
-require('./miranda.js');

@@ -3,7 +3,7 @@ let cssPlugin = require('mini-css-extract-plugin');
 module.exports = {
 
     entry: {
-        './vendors':'./src/vendors.js',
+        './ui-libs':'./src/ui-libs.js',
         './master/master': './src/master/master.js',
 
         './index/index': './src/index/index.js',
@@ -11,30 +11,11 @@ module.exports = {
     module:{
         rules: [
 
-            // {
-            //     test: /\.css$/,
-            //     use: [
-            //         cssPlugin.loader,
-            //         {
-            //             loader: 'css-loader',
-            //             options: {
-            //                 url(url, resourcePath) {
-            //
-            //                     //Для font-awesome.css разрешаем все url'ы
-            //                     if (resourcePath.match(/font-awesome.css$/)) {
-            //                         return true;
-            //                     }
-            //                     //А в остальных случаях запрещаем url только для изображений
-            //                     else if (url.match(/\.(png|jp(e)g|svg|gif)($|\?.*)/)) {
-            //                         return false;
-            //                     } else {
-            //                         return false;
-            //                     }
-            //                 }
-            //             }
-            //         },
-            //     ]
-            // },
+            {
+                test: /\.ts/,
+                loader: 'ts-loader'
+            },
+
             {
                 test: /\.scss/,
                 use: [

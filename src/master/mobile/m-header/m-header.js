@@ -1,3 +1,5 @@
+
+
 let burgerButton = document.querySelector('.m-menu-button');
 let mobileMenuWrapper = document.querySelector('.m-menu-wrapper');
 let mobileMenuDim = document.querySelector('.m-menu-dim');
