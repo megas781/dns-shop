@@ -6,16 +6,16 @@
     let outIndex = null;
 
     document.querySelectorAll('.aside-submenu2__item').forEach(function (item, key) {
-        let submenu3: HTMLElement = item.querySelector('.aside-submenu3');
+        let submenu3 = <HTMLElement>item.querySelector('.aside-submenu3');
         item.addEventListener('mouseenter', function (e) {
 
-            let linkWidth = parseFloat(getComputedStyle(item.querySelector('.aside-submenu2__link')).width);
+            let linkWidth = parseFloat(getComputedStyle(item.querySelector('.aside-submenu2__link')!).width!);
             submenu3.style.left = (linkWidth + 24) + 'px';
 
             if (activeItem === item) {
-                clearTimeout(outIndex);
+                outIndex && clearTimeout(outIndex!);
             }
-            clearTimeout(hoverIndex);
+            hoverIndex && clearTimeout(hoverIndex!);
 
             // hoverIndex = setTimeout(function () {
             //     item.classList.add('active');

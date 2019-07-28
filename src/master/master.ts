@@ -10,18 +10,18 @@ import './mobile/m-header/m-header.ts';
 import './miranda.ts';
 
 const topbarHeight: number = 34;
-
+//
 window.addEventListener('scroll', function () {
     if (window.scrollY >= topbarHeight) {
-        document.querySelector('.prime-header').classList.add('fixed');
+        document.querySelector('.prime-header')!.classList.add('fixed');
     } else {
-        document.querySelector('.prime-header').classList.remove('fixed');
+        document.querySelector('.prime-header')!.classList.remove('fixed');
     }
 
     //Для мобильных устройств
     if (window.innerWidth < 1000) {
-        let mTopbar: HTMLElement = document.querySelector('.m-topbar');
-        if (window.scrollY >= parseFloat(getComputedStyle(mTopbar).height)) {
+        let mTopbar: HTMLElement = <HTMLElement>document.querySelector('.m-topbar');
+        if (window.scrollY >= parseFloat(getComputedStyle(mTopbar).height!)) {
             mTopbar.classList.add('fixed');
         } else {
             mTopbar.classList.remove('fixed');

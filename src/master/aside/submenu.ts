@@ -1,27 +1,29 @@
 const duration = 500;
 
-let dim: HTMLElement = document.querySelector('.dim');
-let dimOutTimeoutIndex: number = null;
-document.querySelector('.aside-menu').addEventListener('mouseleave', function () {
+let dim: HTMLElement = <HTMLElement>document.querySelector('.dim');
+let dimOutTimeoutIndex: number | null = null;
+
+document.querySelector('.aside-menu')!.addEventListener('mouseleave', function () {
     dimOutTimeoutIndex = setTimeout(function () {
         dim.classList.remove('visible');
     }, duration);
 });
 let k = 0;
 
-let activeItem = null;
+let activeItem: HTMLElement | null = null;
 
-let hoverIndex = null;
-let outIndex = null;
+let hoverIndex: number | null = null;
+let outIndex: number | null = null;
 
 
 //Устанавливаем event'ы для item'ов
 document.querySelectorAll('.aside-menu__item').forEach(function (item, key, parent) {
 
     //Заранее объявляем submenu нашего item'a
-    let submenu: HTMLElement = item.querySelector('.aside-submenu-wrapper');
-    item.querySelector('.aside-menu__link').innerHTML += ` (${++k})`;
-    submenu.querySelector('.aside-submenu1__link').innerHTML += ` (${k})`;
+    let submenu = <HTMLElement>item.querySelector('.aside-submenu-wrapper');
+
+    item.querySelector('.aside-menu__link')!.innerHTML += ` (${++k})`;
+    submenu.querySelector('.aside-submenu1__link')!.innerHTML += ` (${k})`;
     if (key < 9) {
         submenu.style.top = '0';
     } else {
@@ -33,10 +35,10 @@ document.querySelectorAll('.aside-menu__item').forEach(function (item, key, pare
         console.log(`enter ${key + 1}`);
 
         if (activeItem === item) {
-            clearTimeout(outIndex);
+            outIndex && clearTimeout(outIndex!);
         }
-        clearTimeout(hoverIndex);
-        clearTimeout(dimOutTimeoutIndex);
+        hoverIndex && clearTimeout(hoverIndex!);
+        dimOutTimeoutIndex && clearTimeout(dimOutTimeoutIndex!);
 
         hoverIndex = setTimeout(function () {
             assignActiveItem(item);
@@ -47,7 +49,7 @@ document.querySelectorAll('.aside-menu__item').forEach(function (item, key, pare
     item.addEventListener('mouseleave', function (e) {
         console.log(`leave ${key + 1}`);
         if (activeItem == null) {
-            clearTimeout(hoverIndex);
+            hoverIndex && clearTimeout(hoverIndex!);
         }
         //Устанавливаем outTimout только если данный item является активным
         if (activeItem === item) {
